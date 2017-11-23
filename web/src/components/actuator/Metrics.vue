@@ -3,9 +3,9 @@
     <div class="card-header d-flex">
       <div>Metrics</div>
       <div class="ml-auto">
-        <i class="fa space" :class="{'pointer': metrics, 'fa-eye': metrics, 'fa-eye-slash': !metrics}"
-           aria-hidden="true" @click="showSource = true"></i>
-        <raw :show="showSource" :raw="metrics" @close="showSource = false"></raw>
+        <i class="fa space" :class="{'pointer': source, 'fa-eye': source, 'fa-eye-slash': !source}"
+           aria-hidden="true" @click="showSource = source && true"></i>
+        <raw :show="showSource" :raw="source" @close="showSource = false"></raw>
         <i @click="!loading && refresh()" class="fa fa-refresh" :class="{'pointer': !loading, 'fa-spin': loading}"
            aria-hidden="true"></i>
       </div>

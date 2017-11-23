@@ -3,7 +3,7 @@ import Router from 'vue-router'
 import Home from '@/components/Home'
 import User from '@/components/User'
 import NotFound from '@/components/NotFound'
-import actuator from './actuator'
+import actuator from '../components/actuator/actuator'
 
 Vue.use(Router)
 

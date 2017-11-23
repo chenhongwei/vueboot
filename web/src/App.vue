@@ -1,8 +1,10 @@
 <template>
   <div id="app">
+    <notifications group="general"/>
     <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
       <a class="navbar-brand" href="#">Vue</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" :aria-expanded="navbarExp" aria-label="Toggle navigation" @click.stop="toggleNavbar()" v-click-outside="closeNavbar">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" :aria-expanded="navbarExp"
+              aria-label="Toggle navigation" @click.stop="toggleNavbar()" v-click-outside="closeNavbar">
         <span class="navbar-toggler-icon"></span>
       </button>
 
@@ -14,14 +16,20 @@
               <span>Home</span>
             </router-link>
           </li>
-          <li class="nav-item dropdown pointer" @click.stop="toggleSettings()" v-click-outside="closeSettings" v-bind:class="{active: $router.currentRoute.path.startsWith('/admin')}">
-            <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
-               :aria-expanded="settings">
+          <li class="nav-item dropdown pointer"
+              v-bind:class="{active: $router.currentRoute.path.startsWith('/admin')}">
+            <router-link :to="{ path: '/admin' }" class="nav-link dropdown-toggle dropdown-toggle-no-caret"
+                         id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                         :aria-expanded="settings">
               <i class="fa fa-cog" aria-hidden="true"></i>
               <span>Administration</span>
-            </a>
+              <i class="fa fa-caret-down pr-2 pl-2" aria-hidden="true" @click.stop="toggleSettings()"
+                 v-click-outside="closeSettings"></i>
+            </router-link>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown" :style="{display: settings ? 'unset' : 'none'}">
-              <router-link class="nav-link" v-for="link of admin" v-if="link.path !== ''" :key="link.path" v-on:click.native="closeNavbar" :to="{ path: '/admin/' + link.path }" :disabled="$router.currentRoute.name === link.title">
+              <router-link class="nav-link" v-for="link of admin" v-if="link.path !== ''" :key="link.path"
+                           v-on:click.native="closeNavbar" :to="{ path: '/admin/' + link.path }"
+                           :disabled="$router.currentRoute.name === link.title">
                 <span>{{link.name}}</span>
               </router-link>
             </div>
@@ -29,13 +37,15 @@
         </ul>
         <ul class="navbar-nav ml-auto">
           <li class="nav-item dropdown pointer" @click.stop="toggleLanguages()" v-click-outside="closeLanguages">
-            <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+            <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"
+               aria-haspopup="true"
                :aria-expanded="lang">
               <i class="fa fa-flag" aria-hidden="true"></i>
               <span>Languages</span>
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown" :style="{display: lang ? 'unset' : 'none'}">
-              <a class="nav-link" v-for="(display,key) of languages" :key="key" @click="setLang(key)" v-if="current() !== key">
+              <a class="nav-link" v-for="(display,key) of languages" :key="key" @click="setLang(key)"
+                 v-if="current() !== key">
                 <span>{{display}}</span>
               </a>
             </div>
@@ -51,141 +61,149 @@
 </template>
 
 <script>
-import nprogress from 'nprogress'
-import axios from 'axios'
-import Vue from 'vue'
-import ApiService from './modules/api'
-import LoggerService from './modules/logger'
-import I18nService from './modules/i18n'
-import Vuex from 'vuex'
-import vuexI18n from 'vuex-i18n'
-import Modal from './components/Modal'
-import Confirm from './components/Confirm'
-import Raw from './components/Raw'
-import ActuatorRoutes from './router/actuator'
-import ClickOutside from 'v-click-outside'
-import VueCodeMirror from 'vue-codemirror'
+  import nprogress from 'nprogress'
+  import axios from 'axios'
+  import Vue from 'vue'
+  import ApiService from './modules/api'
+  import LoggerService from './modules/logger'
+  import I18nService from './modules/i18n'
+  import Vuex from 'vuex'
+  import vuexI18n from 'vuex-i18n'
+  import Modal from './components/Modal'
+  import Confirm from './components/Confirm'
+  import Raw from './components/Raw'
+  import ActuatorRoutes from './components/actuator/actuator'
+  import ClickOutside from 'v-click-outside'
+  import VueCodeMirror from 'vue-codemirror'
+  import Notifications from 'vue-notification'
+  import {ServerTable, ClientTable} from 'vue-tables-2'
 
-Vue.use(VueCodeMirror)
-Vue.use(Vuex)
-Vue.use(ClickOutside)
+  Vue.use(ClientTable, {}, false)
+  Vue.use(ServerTable, {}, false)
+  Vue.use(Notifications)
+  Vue.use(VueCodeMirror)
+  Vue.use(Vuex)
+  Vue.use(ClickOutside)
 
-Vue.use(LoggerService)
-Vue.use(I18nService)
-Vue.use(ApiService, process.env.BASE_URL)
+  Vue.use(LoggerService)
+  Vue.use(I18nService)
+  Vue.use(ApiService, process.env.BASE_URL)
 
-Vue.component('modal', Modal)
-Vue.component('confirm', Confirm)
-Vue.component('raw', Raw)
+  Vue.component('modal', Modal)
+  Vue.component('confirm', Confirm)
+  Vue.component('raw', Raw)
 
-const store = new Vuex.Store()
-Vue.use(vuexI18n.plugin, store, {
-  onTranslationNotFound (locale, key) {
-    Vue.$log.warn(`i18n :: Key '${key}' not found for locale '${locale}'`)
-  }
-})
-
-let requestsCounter = 0
-
-nprogress.configure({ showSpinner: false })
-
-axios.interceptors.request.use(function (config) {
-  requestsCounter++
-  nprogress.start()
-  return config
-})
-
-// Add a response interceptor
-axios.interceptors.response.use(function (response) {
-  if ((--requestsCounter) === 0) {
-    nprogress.done()
-  }
-  return response
-}, function (error) {
-  if ((--requestsCounter) === 0) {
-    nprogress.done()
-  }
-  return Promise.reject(error)
-})
-
-export default {
-  name: 'app',
-  data () {
-    return {
-      ready: false,
-      settings: false,
-      lang: false,
-      navbarExp: false,
-      languages: {'fr': 'Français', 'en': 'English'},
-      admin: ActuatorRoutes[0].children
+  const store = new Vuex.Store()
+  Vue.use(vuexI18n.plugin, store, {
+    onTranslationNotFound (locale, key) {
+      Vue.$log.warn(`i18n :: Key '${key}' not found for locale '${locale}'`)
     }
-  },
-  mounted () {
-    this.$log.debug('Env:', process.env)
-    this.ready = true
-    this.$languages.changeLanguage('fr').then(() => { this.ready = true })
-  },
-  methods: {
-    toggleLanguages () {
-      this.lang = !this.lang
-    },
-    toggleSettings () {
-      this.settings = !this.settings
-    },
-    toggleNavbar () {
-      this.navbarExp = !this.navbarExp
-    },
-    closeLanguages () {
-      if (this.lang) {
-        this.lang = false
+  })
+
+  let requestsCounter = 0
+
+  nprogress.configure({showSpinner: false})
+
+  axios.interceptors.request.use(function (config) {
+    requestsCounter++
+    nprogress.start()
+    return config
+  })
+
+  // Add a response interceptor
+  axios.interceptors.response.use(function (response) {
+    if ((--requestsCounter) === 0) {
+      nprogress.done()
+    }
+    return response
+  }, function (error) {
+    if ((--requestsCounter) === 0) {
+      nprogress.done()
+    }
+    return Promise.reject(error)
+  })
+
+  export default {
+    name: 'app',
+    data () {
+      return {
+        ready: false,
+        settings: false,
+        lang: false,
+        navbarExp: false,
+        languages: {'fr': 'Français', 'en': 'English'},
+        admin: ActuatorRoutes[0].children
       }
     },
-    closeSettings () {
-      if (this.settings) {
-        this.settings = false
+    mounted () {
+      this.$log.debug('Env:', process.env)
+      this.ready = true
+      this.$languages.changeLanguage('fr').then(() => {
+        this.ready = true
+      })
+    },
+    methods: {
+      toggleLanguages () {
+        this.lang = !this.lang
+      },
+      toggleSettings () {
+        this.settings = !this.settings
+      },
+      toggleNavbar () {
+        this.navbarExp = !this.navbarExp
+      },
+      closeLanguages () {
+        if (this.lang) {
+          this.lang = false
+        }
+      },
+      closeSettings () {
+        if (this.settings) {
+          this.settings = false
+        }
+      },
+      closeNavbar () {
+        if (this.navbarExp) {
+          this.navbarExp = false
+        }
+      },
+      setLang (language) {
+        this.$languages.changeLanguage(language)
+        this.closeNavbar()
+      },
+      current () {
+        return Vue.i18n.locale()
       }
-    },
-    closeNavbar () {
-      if (this.navbarExp) {
-        this.navbarExp = false
-      }
-    },
-    setLang (language) {
-      this.$languages.changeLanguage(language)
-      this.closeNavbar()
-    },
-    current () {
-      return Vue.i18n.locale()
     }
   }
-}
 </script>
 
 <style lang="scss">
-@import "../scss/_colors";
+  @import "../scss/_colors";
+  @import "~bootstrap/scss/bootstrap";
+  @import "../scss/_styles";
 
-@import "~bootstrap/scss/bootstrap";
-
-@import "../scss/_styles";
-
-$fa-font-path: "~font-awesome/fonts";
-@import "~font-awesome/scss/font-awesome";
+  $fa-font-path: "~font-awesome/fonts";
+  @import "~font-awesome/scss/font-awesome";
 </style>
 
 <style>
-[v-cloak] {
-  display: none;
-}
-body {
-  margin: unset;
-}
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
-}
-#main {
-  padding: 15px;
-}
+  [v-cloak] {
+    display: none;
+  }
+
+  body {
+    margin: unset;
+  }
+
+  #app {
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #2c3e50;
+  }
+
+  #main {
+    padding: 15px;
+  }
 </style>

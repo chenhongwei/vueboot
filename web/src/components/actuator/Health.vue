@@ -3,8 +3,8 @@
     <div class="card-header d-flex">
       <div>Health</div>
       <div class="ml-auto">
-        <i class="fa space" :class="{'pointer': source, 'fa-eye': source, 'fa-eye-slash': !source}" aria-hidden="true"
-           @click="showSource = source && true"></i>
+        <i class="fa space" :class="{'pointer': source, 'fa-eye': source, 'fa-eye-slash': !source}"
+           aria-hidden="true" @click="showSource = source && true"></i>
         <raw :show="showSource" :raw="source" @close="showSource = false"></raw>
         <i @click="!loading && refresh()" class="fa fa-refresh" :class="{'pointer': !loading, 'fa-spin': loading}"
            aria-hidden="true"></i>
