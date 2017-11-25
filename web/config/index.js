@@ -4,11 +4,15 @@
 
 const path = require('path')
 
+// abstolute
+// const assetsSubDirectory: 'static',
+const assetsSubDirectory = '';
+
 module.exports = {
   dev: {
 
     // Paths
-    assetsSubDirectory: 'static',
+    assetsSubDirectory: assetsSubDirectory,
     assetsPublicPath: '/',
     proxyTable: {},
 
@@ -54,14 +58,18 @@ module.exports = {
 
     // Paths
     assetsRoot: path.resolve(__dirname, '../../target/classes/public'),
-    assetsSubDirectory: 'static',
+    assetsSubDirectory: assetsSubDirectory,
+
+    // relative
     assetsPublicPath: '',
+    // absolute
+    // assetsPublicPath: '/',
 
     /**
      * Source Maps
      */
 
-    productionSourceMap: true,
+    productionSourceMap: false,
     // https://webpack.js.org/configuration/devtool/#production
     devtool: '#source-map',
     

@@ -4,7 +4,8 @@ const utils = require('./utils')
 const config = require('./index')
 const vueLoaderConfig = require('./vue-loader.conf')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
-const prefix = process.env.NODE_ENV === 'production' ? 'css/static/' : '';
+
+const demoIgnore = process.env.ENV_TYPE === 'demo' ? '.*' : '**/*';
 
 function resolve (dir) {
   return path.join(__dirname, '../..', dir)
@@ -55,7 +56,7 @@ module.exports = {
         loader: 'url-loader',
         options: {
           limit: 10000,
-          name: utils.assetsPath('img/[name].[hash:7].[ext]')
+          name: utils.assetsPath('[name].[hash:7].[ext]')
         }
       },
       {
@@ -63,7 +64,7 @@ module.exports = {
         loader: 'url-loader',
         options: {
           limit: 10000,
-          name: utils.assetsPath('media/[name].[hash:7].[ext]')
+          name: utils.assetsPath('[name].[hash:7].[ext]')
         }
       },
       {
@@ -71,7 +72,7 @@ module.exports = {
         loader: 'url-loader',
         options: {
           limit: 10000,
-          name: utils.assetsPath(prefix + 'fonts/[name].[hash:7].[ext]')
+          name: utils.assetsPath('[name].[hash:7].[ext]')
         }
       }
     ]
@@ -83,7 +84,8 @@ module.exports = {
         from: path.resolve(__dirname, '../static'),
         to: process.env.NODE_ENV === 'production' ? config.build.assetsSubDirectory : config.dev.assetsSubDirectory,
         ignore: ['.*']
-      }
+      },
+      { from: path.resolve(__dirname, '../demo'), to: '', ignore: [ demoIgnore ] }
     ])
   ]
 }

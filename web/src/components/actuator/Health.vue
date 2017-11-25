@@ -4,10 +4,10 @@
       <div>Health</div>
       <div class="ml-auto">
         <i class="fa space" :class="{'pointer': source, 'fa-eye': source, 'fa-eye-slash': !source}"
-           aria-hidden="true" @click="showSource = source && true"></i>
+           aria-hidden="true" @click="showSource = source && true" v-tooltip="'See raw details'"></i>
         <raw :show="showSource" :raw="source" @close="showSource = false"></raw>
         <i @click="!loading && refresh()" class="fa fa-refresh" :class="{'pointer': !loading, 'fa-spin': loading}"
-           aria-hidden="true"></i>
+           aria-hidden="true" v-tooltip="'Refresh data'"></i>
       </div>
     </div>
     <div class="card-body">

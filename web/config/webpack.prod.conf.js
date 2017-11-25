@@ -9,9 +9,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
 
-const env = process.env.NODE_ENV === 'testing'
-  ? require('./test.env')
-  : require('./prod.env')
+const env = process.env.NODE_ENV === 'testing' ? require('./test.env') : require('./prod.env');
 
 const webpackConfig = merge(baseWebpackConfig, {
   module: {
@@ -24,8 +22,8 @@ const webpackConfig = merge(baseWebpackConfig, {
   devtool: config.build.productionSourceMap ? config.build.devtool : false,
   output: {
     path: config.build.assetsRoot,
-    filename: utils.assetsPath('js/[name].[chunkhash].js'),
-    chunkFilename: utils.assetsPath('js/[name].[chunkhash].js')
+    filename: utils.assetsPath('[name].[chunkhash].js'),
+    chunkFilename: utils.assetsPath('[name].[chunkhash].js')
   },
   plugins: [
     // http://vuejs.github.io/vue-loader/en/workflow/production.html
@@ -42,7 +40,7 @@ const webpackConfig = merge(baseWebpackConfig, {
     }),
     // extract css into its own file
     new ExtractTextPlugin({
-      filename: utils.assetsPath('css/[name].[contenthash].css'),
+      filename: utils.assetsPath('[name].[contenthash].css'),
       // set the following option to `true` if you want to extract CSS from
       // codesplit chunks into this main css file as well.
       // This will result in *all* of your app's CSS being loaded upfront.
@@ -59,9 +57,7 @@ const webpackConfig = merge(baseWebpackConfig, {
     // you can customize output by editing /index.html
     // see https://github.com/ampedandwired/html-webpack-plugin
     new HtmlWebpackPlugin({
-      filename: process.env.NODE_ENV === 'testing'
-        ? 'index.html'
-        : config.build.index,
+      filename: process.env.NODE_ENV === 'testing' ? 'index.html' : config.build.index,
       template: 'web/index.html',
       inject: true,
       minify: {
@@ -88,8 +84,8 @@ const webpackConfig = merge(baseWebpackConfig, {
           /\.js$/.test(module.resource) &&
           module.resource.indexOf(
             path.join(__dirname, '../../node_modules')
-          ) === 0
-        )
+            ) === 0
+          )
       }
     }),
     // extract webpack runtime and module manifest to its own file in order to
@@ -107,8 +103,8 @@ const webpackConfig = merge(baseWebpackConfig, {
       children: true,
       minChunks: 3
     })
-  ]
-})
+    ]
+  })
 
 if (config.build.productionGzip) {
   const CompressionWebpackPlugin = require('compression-webpack-plugin')
@@ -121,11 +117,11 @@ if (config.build.productionGzip) {
         '\\.(' +
         config.build.productionGzipExtensions.join('|') +
         ')$'
-      ),
+        ),
       threshold: 10240,
       minRatio: 0.8
     })
-  )
+    )
 }
 
 if (config.build.bundleAnalyzerReport) {

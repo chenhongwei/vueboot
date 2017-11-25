@@ -6,17 +6,21 @@
   "private": true,
   "scripts": {
     "start": "webpack-dev-server --inline --progress --config web/config/webpack.dev.conf.js",
+    "start:demo": "cross-env ENV_TYPE=demo npm run start",
     "unit": "cross-env BABEL_ENV=test karma start web/test/unit/karma.conf.js --single-run",
     "e2e": "node web/test/e2e/runner.js",
     "test": "npm run unit && npm run e2e",
     "lint": "eslint --ext .js,.vue web/src test/unit/specs test/e2e/specs",
-    "build": "node web/config/build.js"
+    "build": "node web/config/build.js",
+    "build:demo": "cross-env ENV_TYPE=demo npm run build"
   },
   "dependencies": {
     "axios": "^0.17.1",
     "nprogress": "^0.2.0",
     "v-click-outside": "^1.0.0",
+    "v-tooltip": "^2.0.0-rc.25",
     "vue": "^2.5.2",
+    "vue-clipboard2": "^0.0.8",
     "vue-codemirror": "^3.1.8",
     "vue-notification": "^1.3.4",
     "vue-router": "^3.0.1",

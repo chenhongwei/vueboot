@@ -2,7 +2,7 @@
 	<modal :show="show" :size="size" @close="close">
 		<div class="modal-header">
 			<slot name="header">
-				<h5 class="modal-title" id="exampleModalLabel">{{title}}</h5>
+				<h5 class="modal-title" id="rawModal">{{title}}</h5>
 				<button type="button" class="close pointer" data-dismiss="modal" @click="close" aria-label="Close">
 					<span aria-hidden="true">&times;</span>
 				</button>
@@ -17,10 +17,11 @@
 		</div>
 		<div class="modal-footer">
 			<slot name="header">
-				<button type="button" class="pointer btn btn-secondary" @click="close" data-dismiss="modal">{{closeBtn}}</button>
-			</slot>
-		</div>
-	</modal>
+        <button v-if="showCopy" v-clipboard:copy="code" v-clipboard:success="success" v-clipboard:error="error" class="pointer btn btn-secondary" data-dismiss="modal">{{copyBtn}}</button>
+        <button type="button" class="pointer btn btn-secondary" @click="close" data-dismiss="modal">{{closeBtn}}</button>
+      </slot>
+    </div>
+  </modal>
 </template>
 
 <script>
@@ -57,6 +58,12 @@ export default {
     mode: {
       default: 'text/javascript'
     },
+    showCopy: {
+      default: true
+    },
+    copyBtn: {
+      default: 'Copy'
+    },
     closeBtn: {
       default: 'Close'
     }
@@ -74,6 +81,12 @@ export default {
     },
     refresh () {
       setTimeout(() => this.$refs.editor.refresh(), 0)
+    },
+    success () {
+      this.$notify({group: 'general', type: 'success', title: 'Copied to clipboard'})
+    },
+    error () {
+      this.$notify({group: 'general', type: 'error', title: 'Unable to copy to clipboard'})
     }
   },
   computed: {

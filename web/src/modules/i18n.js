@@ -7,7 +7,7 @@ I18nService.install = function (Vue) {
     changeLanguage (language) {
       if (Vue.i18n.locale() !== language) {
         if (!Vue.i18n.localeExists(language)) {
-          return axios.get(`static/i18n/${language}.json`).then((response) => {
+          return axios.get(`i18n/${language}.json`).then((response) => {
             Vue.i18n.add(language, response.data)
             Vue.i18n.set(language)
           }).catch((e) => {

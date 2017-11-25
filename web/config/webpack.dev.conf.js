@@ -1,4 +1,7 @@
 'use strict'
+
+process.env.ENV_TYPE = process.env.ENV_TYPE ? process.env.ENV_TYPE : 'standard';
+
 const utils = require('./utils')
 const webpack = require('webpack')
 const config = require('./index')
