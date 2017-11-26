@@ -1,0 +1,499 @@
+{
+  "events": [
+    {
+      "timestamp": "2017-11-13T14:42:10+0000",
+      "principal": "anonymousUser",
+      "type": "AUTHORIZATION_FAILURE",
+      "data": {
+        "details": {
+          "remoteAddress": "0:0:0:0:0:0:0:1",
+          "sessionId": null
+        },
+        "type": "org.springframework.security.access.AccessDeniedException",
+        "message": "Access is denied"
+      }
+    },
+    {
+      "timestamp": "2017-11-13T14:42:10+0000",
+      "principal": "oauth",
+      "type": "AUTHENTICATION_FAILURE",
+      "data": {
+        "details": {
+          "remoteAddress": "0:0:0:0:0:0:0:1",
+          "sessionId": null
+        },
+        "type": "org.springframework.security.authentication.BadCredentialsException",
+        "message": "Bad credentials"
+      }
+    },
+    {
+      "timestamp": "2017-11-13T14:42:10+0000",
+      "principal": "oauth",
+      "type": "AUTHENTICATION_FAILURE",
+      "data": {
+        "details": {
+          "remoteAddress": "0:0:0:0:0:0:0:1",
+          "sessionId": null
+        },
+        "type": "org.springframework.security.authentication.BadCredentialsException",
+        "message": "Bad credentials"
+      }
+    },
+    {
+      "timestamp": "2017-11-13T14:42:41+0000",
+      "principal": "admin",
+      "type": "AUTHENTICATION_SUCCESS",
+      "data": {
+        "details": {
+          "remoteAddress": "0:0:0:0:0:0:0:1",
+          "sessionId": null
+        }
+      }
+    },
+    {
+      "timestamp": "2017-11-13T14:42:41+0000",
+      "principal": "anonymousUser",
+      "type": "AUTHORIZATION_FAILURE",
+      "data": {
+        "details": {
+          "remoteAddress": "0:0:0:0:0:0:0:1",
+          "sessionId": null
+        },
+        "type": "org.springframework.security.access.AccessDeniedException",
+        "message": "Access is denied"
+      }
+    },
+    {
+      "timestamp": "2017-11-13T14:42:41+0000",
+      "principal": "undefined",
+      "type": "AUTHENTICATION_FAILURE",
+      "data": {
+        "details": {
+          "remoteAddress": "0:0:0:0:0:0:0:1",
+          "sessionId": "269D93A3C9D219225BCD85FF87398FEC"
+        },
+        "type": "org.springframework.security.authentication.BadCredentialsException",
+        "message": "Bad credentials"
+      }
+    },
+    {
+      "timestamp": "2017-11-13T14:42:41+0000",
+      "principal": "undefined",
+      "type": "AUTHENTICATION_FAILURE",
+      "data": {
+        "details": {
+          "remoteAddress": "0:0:0:0:0:0:0:1",
+          "sessionId": "269D93A3C9D219225BCD85FF87398FEC"
+        },
+        "type": "org.springframework.security.authentication.BadCredentialsException",
+        "message": "Bad credentials"
+      }
+    },
+    {
+      "timestamp": "2017-11-13T14:42:50+0000",
+      "principal": "admin",
+      "type": "AUTHENTICATION_SUCCESS",
+      "data": {
+        "details": {
+          "remoteAddress": "0:0:0:0:0:0:0:1",
+          "sessionId": "269D93A3C9D219225BCD85FF87398FEC"
+        }
+      }
+    },
+    {
+      "timestamp": "2017-11-13T14:42:50+0000",
+      "principal": "anonymousUser",
+      "type": "AUTHORIZATION_FAILURE",
+      "data": {
+        "details": {
+          "remoteAddress": "0:0:0:0:0:0:0:1",
+          "sessionId": null
+        },
+        "type": "org.springframework.security.access.AccessDeniedException",
+        "message": "Access is denied"
+      }
+    },
+    {
+      "timestamp": "2017-11-13T14:42:51+0000",
+      "principal": "undefined",
+      "type": "AUTHENTICATION_FAILURE",
+      "data": {
+        "details": {
+          "remoteAddress": "0:0:0:0:0:0:0:1",
+          "sessionId": "1FE2DC7B027BB00E74384F1FBAD2F03E"
+        },
+        "type": "org.springframework.security.authentication.BadCredentialsException",
+        "message": "Bad credentials"
+      }
+    },
+    {
+      "timestamp": "2017-11-13T14:42:51+0000",
+      "principal": "undefined",
+      "type": "AUTHENTICATION_FAILURE",
+      "data": {
+        "details": {
+          "remoteAddress": "0:0:0:0:0:0:0:1",
+          "sessionId": "1FE2DC7B027BB00E74384F1FBAD2F03E"
+        },
+        "type": "org.springframework.security.authentication.BadCredentialsException",
+        "message": "Bad credentials"
+      }
+    },
+    {
+      "timestamp": "2017-11-13T14:46:21+0000",
+      "principal": "undefined",
+      "type": "AUTHENTICATION_FAILURE",
+      "data": {
+        "details": {
+          "remoteAddress": "0:0:0:0:0:0:0:1",
+          "sessionId": "1FE2DC7B027BB00E74384F1FBAD2F03E"
+        },
+        "type": "org.springframework.security.authentication.BadCredentialsException",
+        "message": "Bad credentials"
+      }
+    },
+    {
+      "timestamp": "2017-11-13T14:46:21+0000",
+      "principal": "undefined",
+      "type": "AUTHENTICATION_FAILURE",
+      "data": {
+        "details": {
+          "remoteAddress": "0:0:0:0:0:0:0:1",
+          "sessionId": "1FE2DC7B027BB00E74384F1FBAD2F03E"
+        },
+        "type": "org.springframework.security.authentication.BadCredentialsException",
+        "message": "Bad credentials"
+      }
+    },
+    {
+      "timestamp": "2017-11-13T14:46:21+0000",
+      "principal": "undefined",
+      "type": "AUTHENTICATION_FAILURE",
+      "data": {
+        "details": {
+          "remoteAddress": "0:0:0:0:0:0:0:1",
+          "sessionId": "1FE2DC7B027BB00E74384F1FBAD2F03E"
+        },
+        "type": "org.springframework.security.authentication.BadCredentialsException",
+        "message": "Bad credentials"
+      }
+    },
+    {
+      "timestamp": "2017-11-13T14:47:10+0000",
+      "principal": "admin",
+      "type": "AUTHENTICATION_SUCCESS",
+      "data": {
+        "details": {
+          "remoteAddress": "0:0:0:0:0:0:0:1",
+          "sessionId": "1FE2DC7B027BB00E74384F1FBAD2F03E"
+        }
+      }
+    },
+    {
+      "timestamp": "2017-11-13T14:47:10+0000",
+      "principal": "anonymousUser",
+      "type": "AUTHORIZATION_FAILURE",
+      "data": {
+        "details": {
+          "remoteAddress": "0:0:0:0:0:0:0:1",
+          "sessionId": null
+        },
+        "type": "org.springframework.security.access.AccessDeniedException",
+        "message": "Access is denied"
+      }
+    },
+    {
+      "timestamp": "2017-11-13T14:47:11+0000",
+      "principal": "undefined",
+      "type": "AUTHENTICATION_FAILURE",
+      "data": {
+        "details": {
+          "remoteAddress": "0:0:0:0:0:0:0:1",
+          "sessionId": "52AF20766FB1396844ABFCCBD52694D0"
+        },
+        "type": "org.springframework.security.authentication.BadCredentialsException",
+        "message": "Bad credentials"
+      }
+    },
+    {
+      "timestamp": "2017-11-13T14:47:11+0000",
+      "principal": "undefined",
+      "type": "AUTHENTICATION_FAILURE",
+      "data": {
+        "details": {
+          "remoteAddress": "0:0:0:0:0:0:0:1",
+          "sessionId": "52AF20766FB1396844ABFCCBD52694D0"
+        },
+        "type": "org.springframework.security.authentication.BadCredentialsException",
+        "message": "Bad credentials"
+      }
+    },
+    {
+      "timestamp": "2017-11-13T14:47:34+0000",
+      "principal": "undefined",
+      "type": "AUTHENTICATION_FAILURE",
+      "data": {
+        "details": {
+          "remoteAddress": "0:0:0:0:0:0:0:1",
+          "sessionId": "52AF20766FB1396844ABFCCBD52694D0"
+        },
+        "type": "org.springframework.security.authentication.BadCredentialsException",
+        "message": "Bad credentials"
+      }
+    },
+    {
+      "timestamp": "2017-11-13T14:47:34+0000",
+      "principal": "undefined",
+      "type": "AUTHENTICATION_FAILURE",
+      "data": {
+        "details": {
+          "remoteAddress": "0:0:0:0:0:0:0:1",
+          "sessionId": "52AF20766FB1396844ABFCCBD52694D0"
+        },
+        "type": "org.springframework.security.authentication.BadCredentialsException",
+        "message": "Bad credentials"
+      }
+    },
+    {
+      "timestamp": "2017-11-13T14:47:34+0000",
+      "principal": "undefined",
+      "type": "AUTHENTICATION_FAILURE",
+      "data": {
+        "details": {
+          "remoteAddress": "0:0:0:0:0:0:0:1",
+          "sessionId": "52AF20766FB1396844ABFCCBD52694D0"
+        },
+        "type": "org.springframework.security.authentication.BadCredentialsException",
+        "message": "Bad credentials"
+      }
+    },
+    {
+      "timestamp": "2017-11-13T14:50:32+0000",
+      "principal": "admin",
+      "type": "AUTHENTICATION_SUCCESS",
+      "data": {
+        "details": {
+          "remoteAddress": "0:0:0:0:0:0:0:1",
+          "sessionId": "52AF20766FB1396844ABFCCBD52694D0"
+        }
+      }
+    },
+    {
+      "timestamp": "2017-11-13T14:51:03+0000",
+      "principal": "anonymousUser",
+      "type": "AUTHORIZATION_FAILURE",
+      "data": {
+        "details": {
+          "remoteAddress": "0:0:0:0:0:0:0:1",
+          "sessionId": null
+        },
+        "type": "org.springframework.security.access.AccessDeniedException",
+        "message": "Access is denied"
+      }
+    },
+    {
+      "timestamp": "2017-11-13T14:51:03+0000",
+      "principal": "undefined",
+      "type": "AUTHENTICATION_FAILURE",
+      "data": {
+        "details": {
+          "remoteAddress": "0:0:0:0:0:0:0:1",
+          "sessionId": "C9EE002E45F0662FF4D851B8F98A2F33"
+        },
+        "type": "org.springframework.security.authentication.BadCredentialsException",
+        "message": "Bad credentials"
+      }
+    },
+    {
+      "timestamp": "2017-11-13T14:51:03+0000",
+      "principal": "undefined",
+      "type": "AUTHENTICATION_FAILURE",
+      "data": {
+        "details": {
+          "remoteAddress": "0:0:0:0:0:0:0:1",
+          "sessionId": "C9EE002E45F0662FF4D851B8F98A2F33"
+        },
+        "type": "org.springframework.security.authentication.BadCredentialsException",
+        "message": "Bad credentials"
+      }
+    },
+    {
+      "timestamp": "2017-11-13T14:51:19+0000",
+      "principal": "admin",
+      "type": "AUTHENTICATION_SUCCESS",
+      "data": {
+        "details": {
+          "remoteAddress": "0:0:0:0:0:0:0:1",
+          "sessionId": "C9EE002E45F0662FF4D851B8F98A2F33"
+        }
+      }
+    },
+    {
+      "timestamp": "2017-11-13T14:51:19+0000",
+      "principal": "anonymousUser",
+      "type": "AUTHORIZATION_FAILURE",
+      "data": {
+        "details": {
+          "remoteAddress": "0:0:0:0:0:0:0:1",
+          "sessionId": null
+        },
+        "type": "org.springframework.security.access.AccessDeniedException",
+        "message": "Access is denied"
+      }
+    },
+    {
+      "timestamp": "2017-11-13T14:51:19+0000",
+      "principal": "undefined",
+      "type": "AUTHENTICATION_FAILURE",
+      "data": {
+        "details": {
+          "remoteAddress": "0:0:0:0:0:0:0:1",
+          "sessionId": "344BFED716302537E991B88C98AF35AA"
+        },
+        "type": "org.springframework.security.authentication.BadCredentialsException",
+        "message": "Bad credentials"
+      }
+    },
+    {
+      "timestamp": "2017-11-13T14:51:19+0000",
+      "principal": "undefined",
+      "type": "AUTHENTICATION_FAILURE",
+      "data": {
+        "details": {
+          "remoteAddress": "0:0:0:0:0:0:0:1",
+          "sessionId": "344BFED716302537E991B88C98AF35AA"
+        },
+        "type": "org.springframework.security.authentication.BadCredentialsException",
+        "message": "Bad credentials"
+      }
+    },
+    {
+      "timestamp": "2017-11-13T14:51:39+0000",
+      "principal": "undefined",
+      "type": "AUTHENTICATION_FAILURE",
+      "data": {
+        "details": {
+          "remoteAddress": "0:0:0:0:0:0:0:1",
+          "sessionId": "344BFED716302537E991B88C98AF35AA"
+        },
+        "type": "org.springframework.security.authentication.BadCredentialsException",
+        "message": "Bad credentials"
+      }
+    },
+    {
+      "timestamp": "2017-11-13T14:51:39+0000",
+      "principal": "undefined",
+      "type": "AUTHENTICATION_FAILURE",
+      "data": {
+        "details": {
+          "remoteAddress": "0:0:0:0:0:0:0:1",
+          "sessionId": "344BFED716302537E991B88C98AF35AA"
+        },
+        "type": "org.springframework.security.authentication.BadCredentialsException",
+        "message": "Bad credentials"
+      }
+    },
+    {
+      "timestamp": "2017-11-13T14:51:39+0000",
+      "principal": "undefined",
+      "type": "AUTHENTICATION_FAILURE",
+      "data": {
+        "details": {
+          "remoteAddress": "0:0:0:0:0:0:0:1",
+          "sessionId": "344BFED716302537E991B88C98AF35AA"
+        },
+        "type": "org.springframework.security.authentication.BadCredentialsException",
+        "message": "Bad credentials"
+      }
+    },
+    {
+      "timestamp": "2017-11-13T14:52:27+0000",
+      "principal": "undefined",
+      "type": "AUTHENTICATION_FAILURE",
+      "data": {
+        "details": {
+          "remoteAddress": "0:0:0:0:0:0:0:1",
+          "sessionId": "344BFED716302537E991B88C98AF35AA"
+        },
+        "type": "org.springframework.security.authentication.BadCredentialsException",
+        "message": "Bad credentials"
+      }
+    },
+    {
+      "timestamp": "2017-11-13T14:52:27+0000",
+      "principal": "undefined",
+      "type": "AUTHENTICATION_FAILURE",
+      "data": {
+        "details": {
+          "remoteAddress": "0:0:0:0:0:0:0:1",
+          "sessionId": "344BFED716302537E991B88C98AF35AA"
+        },
+        "type": "org.springframework.security.authentication.BadCredentialsException",
+        "message": "Bad credentials"
+      }
+    },
+    {
+      "timestamp": "2017-11-13T14:52:27+0000",
+      "principal": "undefined",
+      "type": "AUTHENTICATION_FAILURE",
+      "data": {
+        "details": {
+          "remoteAddress": "0:0:0:0:0:0:0:1",
+          "sessionId": "344BFED716302537E991B88C98AF35AA"
+        },
+        "type": "org.springframework.security.authentication.BadCredentialsException",
+        "message": "Bad credentials"
+      }
+    },
+    {
+      "timestamp": "2017-11-13T14:53:37+0000",
+      "principal": "undefined",
+      "type": "AUTHENTICATION_FAILURE",
+      "data": {
+        "details": {
+          "remoteAddress": "0:0:0:0:0:0:0:1",
+          "sessionId": "344BFED716302537E991B88C98AF35AA"
+        },
+        "type": "org.springframework.security.authentication.BadCredentialsException",
+        "message": "Bad credentials"
+      }
+    },
+    {
+      "timestamp": "2017-11-13T14:53:37+0000",
+      "principal": "undefined",
+      "type": "AUTHENTICATION_FAILURE",
+      "data": {
+        "details": {
+          "remoteAddress": "0:0:0:0:0:0:0:1",
+          "sessionId": "344BFED716302537E991B88C98AF35AA"
+        },
+        "type": "org.springframework.security.authentication.BadCredentialsException",
+        "message": "Bad credentials"
+      }
+    },
+    {
+      "timestamp": "2017-11-13T14:53:37+0000",
+      "principal": "undefined",
+      "type": "AUTHENTICATION_FAILURE",
+      "data": {
+        "details": {
+          "remoteAddress": "0:0:0:0:0:0:0:1",
+          "sessionId": "344BFED716302537E991B88C98AF35AA"
+        },
+        "type": "org.springframework.security.authentication.BadCredentialsException",
+        "message": "Bad credentials"
+      }
+    },
+    {
+      "timestamp": "2017-11-13T14:54:56+0000",
+      "principal": "admin",
+      "type": "AUTHENTICATION_SUCCESS",
+      "data": {
+        "details": {
+          "remoteAddress": "0:0:0:0:0:0:0:1",
+          "sessionId": "344BFED716302537E991B88C98AF35AA"
+        }
+      }
+    }
+  ]
+}

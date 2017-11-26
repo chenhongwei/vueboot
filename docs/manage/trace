@@ -1,0 +1,337 @@
+[
+  {
+    "timestamp": 1510521142783,
+    "info": {
+      "method": "GET",
+      "path": "/manage/mappings",
+      "headers": {
+        "request": {
+          "host": "localhost:8081",
+          "connection": "keep-alive",
+          "accept": "application/json, text/plain, */*",
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36",
+          "referer": "http://localhost:8081/admin/",
+          "accept-encoding": "gzip, deflate, br",
+          "accept-language": "fr,en-US;q=0.8,en;q=0.6,es;q=0.4,pl;q=0.2,nl;q=0.2,it;q=0.2,de;q=0.2"
+        },
+        "response": {
+          "X-Application-Context": "application:8081",
+          "Content-Type": "application/json;charset=UTF-8",
+          "Transfer-Encoding": "chunked",
+          "Date": "Sun, 12 Nov 2017 21:12:22 GMT",
+          "status": "200"
+        }
+      },
+      "timeTaken": "10"
+    }
+  },
+  {
+    "timestamp": 1510521119085,
+    "info": {
+      "method": "GET",
+      "path": "/manage/env",
+      "headers": {
+        "request": {
+          "host": "localhost:8081",
+          "connection": "keep-alive",
+          "accept": "application/json, text/plain, */*",
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36",
+          "referer": "http://localhost:8081/admin/",
+          "accept-encoding": "gzip, deflate, br",
+          "accept-language": "fr,en-US;q=0.8,en;q=0.6,es;q=0.4,pl;q=0.2,nl;q=0.2,it;q=0.2,de;q=0.2"
+        },
+        "response": {
+          "X-Application-Context": "application:8081",
+          "Content-Type": "application/json;charset=UTF-8",
+          "Transfer-Encoding": "chunked",
+          "Date": "Sun, 12 Nov 2017 21:11:59 GMT",
+          "status": "200"
+        }
+      },
+      "timeTaken": "35"
+    }
+  },
+  {
+    "timestamp": 1510521085811,
+    "info": {
+      "method": "GET",
+      "path": "/manage/metrics",
+      "headers": {
+        "request": {
+          "host": "localhost:8081",
+          "connection": "keep-alive",
+          "accept": "application/json, text/plain, */*",
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36",
+          "referer": "http://localhost:8081/admin/",
+          "accept-encoding": "gzip, deflate, br",
+          "accept-language": "fr,en-US;q=0.8,en;q=0.6,es;q=0.4,pl;q=0.2,nl;q=0.2,it;q=0.2,de;q=0.2"
+        },
+        "response": {
+          "X-Application-Context": "application:8081",
+          "Content-Type": "application/json;charset=UTF-8",
+          "Transfer-Encoding": "chunked",
+          "Date": "Sun, 12 Nov 2017 21:11:25 GMT",
+          "status": "200"
+        }
+      },
+      "timeTaken": "29"
+    }
+  },
+  {
+    "timestamp": 1510520921384,
+    "info": {
+      "method": "GET",
+      "path": "/manage/health",
+      "headers": {
+        "request": {
+          "host": "localhost:8081",
+          "connection": "keep-alive",
+          "accept": "application/json, text/plain, */*",
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36",
+          "referer": "http://localhost:8081/admin/",
+          "accept-encoding": "gzip, deflate, br",
+          "accept-language": "fr,en-US;q=0.8,en;q=0.6,es;q=0.4,pl;q=0.2,nl;q=0.2,it;q=0.2,de;q=0.2"
+        },
+        "response": {
+          "X-Application-Context": "application:8081",
+          "Content-Type": "application/json;charset=UTF-8",
+          "Transfer-Encoding": "chunked",
+          "Date": "Sun, 12 Nov 2017 21:08:41 GMT",
+          "status": "200"
+        }
+      },
+      "timeTaken": "342"
+    }
+  },
+  {
+    "timestamp": 1510520915423,
+    "info": {
+      "method": "GET",
+      "path": "/admin/main.35596abe6e57dd0d246fcd4d8928889c.css.map",
+      "headers": {
+        "request": {
+          "host": "localhost:8081",
+          "connection": "keep-alive",
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36",
+          "accept-encoding": "gzip, deflate, br",
+          "accept-language": "fr,en-US;q=0.8,en;q=0.6,es;q=0.4,pl;q=0.2,nl;q=0.2,it;q=0.2,de;q=0.2",
+          "if-modified-since": "Sun, 12 Nov 2017 15:11:01 GMT"
+        },
+        "response": {
+          "X-Application-Context": "application:8081",
+          "Last-Modified": "Sun, 12 Nov 2017 21:05:52 GMT",
+          "Accept-Ranges": "bytes",
+          "Content-Type": "application/octet-stream",
+          "Content-Length": "118",
+          "Date": "Sun, 12 Nov 2017 21:08:35 GMT",
+          "status": "200"
+        }
+      },
+      "timeTaken": "29"
+    }
+  },
+  {
+    "timestamp": 1510520912287,
+    "info": {
+      "method": "GET",
+      "path": "/admin/assets/fonts/mdi.svg",
+      "headers": {
+        "request": {
+          "host": "localhost:8081",
+          "connection": "keep-alive",
+          "accept": "application/json, text/plain, */*",
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36",
+          "referer": "http://localhost:8081/admin/",
+          "accept-encoding": "gzip, deflate, br",
+          "accept-language": "fr,en-US;q=0.8,en;q=0.6,es;q=0.4,pl;q=0.2,nl;q=0.2,it;q=0.2,de;q=0.2",
+          "if-modified-since": "Sun, 12 Nov 2017 15:11:01 GMT"
+        },
+        "response": {
+          "X-Application-Context": "application:8081",
+          "Last-Modified": "Sun, 12 Nov 2017 21:05:52 GMT",
+          "Accept-Ranges": "bytes",
+          "Content-Type": "image/svg+xml",
+          "Content-Length": "680435",
+          "Date": "Sun, 12 Nov 2017 21:08:32 GMT",
+          "status": "200"
+        }
+      },
+      "timeTaken": "30"
+    }
+  },
+  {
+    "timestamp": 1510520912279,
+    "info": {
+      "method": "GET",
+      "path": "/admin/570eb83859dc23dd0eec423a49e147fe.woff2",
+      "headers": {
+        "request": {
+          "host": "localhost:8081",
+          "connection": "keep-alive",
+          "origin": "http://localhost:8081",
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36",
+          "accept": "*/*",
+          "referer": "http://localhost:8081/admin/main.35596abe6e57dd0d246fcd4d8928889c.css",
+          "accept-encoding": "gzip, deflate, br",
+          "accept-language": "fr,en-US;q=0.8,en;q=0.6,es;q=0.4,pl;q=0.2,nl;q=0.2,it;q=0.2,de;q=0.2",
+          "if-modified-since": "Sun, 12 Nov 2017 15:11:01 GMT"
+        },
+        "response": {
+          "X-Application-Context": "application:8081",
+          "Last-Modified": "Sun, 12 Nov 2017 21:05:52 GMT",
+          "Accept-Ranges": "bytes",
+          "Content-Type": "application/font-woff2",
+          "Content-Length": "44300",
+          "Date": "Sun, 12 Nov 2017 21:08:32 GMT",
+          "status": "200"
+        }
+      },
+      "timeTaken": "44"
+    }
+  },
+  {
+    "timestamp": 1510520910208,
+    "info": {
+      "method": "GET",
+      "path": "/admin/main.ee0b31bd264f67fa4de1.bundle.js",
+      "headers": {
+        "request": {
+          "host": "localhost:8081",
+          "connection": "keep-alive",
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36",
+          "accept": "*/*",
+          "referer": "http://localhost:8081/admin/",
+          "accept-encoding": "gzip, deflate, br",
+          "accept-language": "fr,en-US;q=0.8,en;q=0.6,es;q=0.4,pl;q=0.2,nl;q=0.2,it;q=0.2,de;q=0.2"
+        },
+        "response": {
+          "X-Application-Context": "application:8081",
+          "Last-Modified": "Sun, 12 Nov 2017 21:05:52 GMT",
+          "Accept-Ranges": "bytes",
+          "Content-Type": "application/javascript",
+          "Content-Length": "2000417",
+          "Date": "Sun, 12 Nov 2017 21:08:29 GMT",
+          "status": "200"
+        }
+      },
+      "timeTaken": "698"
+    }
+  },
+  {
+    "timestamp": 1510520909565,
+    "info": {
+      "method": "GET",
+      "path": "/admin/polyfills.b0b01e271eb48d436d0f.bundle.js",
+      "headers": {
+        "request": {
+          "host": "localhost:8081",
+          "connection": "keep-alive",
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36",
+          "accept": "*/*",
+          "referer": "http://localhost:8081/admin/",
+          "accept-encoding": "gzip, deflate, br",
+          "accept-language": "fr,en-US;q=0.8,en;q=0.6,es;q=0.4,pl;q=0.2,nl;q=0.2,it;q=0.2,de;q=0.2",
+          "if-modified-since": "Sun, 12 Nov 2017 15:11:01 GMT"
+        },
+        "response": {
+          "X-Application-Context": "application:8081",
+          "Last-Modified": "Sun, 12 Nov 2017 21:05:52 GMT",
+          "Accept-Ranges": "bytes",
+          "Content-Type": "application/javascript",
+          "Content-Length": "115227",
+          "Date": "Sun, 12 Nov 2017 21:08:29 GMT",
+          "status": "200"
+        }
+      },
+      "timeTaken": "63"
+    }
+  },
+  {
+    "timestamp": 1510520909560,
+    "info": {
+      "method": "GET",
+      "path": "/admin/main.35596abe6e57dd0d246fcd4d8928889c.css",
+      "headers": {
+        "request": {
+          "host": "localhost:8081",
+          "connection": "keep-alive",
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36",
+          "accept": "text/css,*/*;q=0.1",
+          "referer": "http://localhost:8081/admin/",
+          "accept-encoding": "gzip, deflate, br",
+          "accept-language": "fr,en-US;q=0.8,en;q=0.6,es;q=0.4,pl;q=0.2,nl;q=0.2,it;q=0.2,de;q=0.2",
+          "if-modified-since": "Sun, 12 Nov 2017 15:11:01 GMT"
+        },
+        "response": {
+          "X-Application-Context": "application:8081",
+          "Last-Modified": "Sun, 12 Nov 2017 21:05:52 GMT",
+          "Accept-Ranges": "bytes",
+          "Content-Type": "text/css",
+          "Content-Length": "56738",
+          "Date": "Sun, 12 Nov 2017 21:08:29 GMT",
+          "status": "200"
+        }
+      },
+      "timeTaken": "45"
+    }
+  },
+  {
+    "timestamp": 1510520909535,
+    "info": {
+      "method": "GET",
+      "path": "/admin/assets/styles/specific.css",
+      "headers": {
+        "request": {
+          "host": "localhost:8081",
+          "connection": "keep-alive",
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36",
+          "accept": "text/css,*/*;q=0.1",
+          "referer": "http://localhost:8081/admin/",
+          "accept-encoding": "gzip, deflate, br",
+          "accept-language": "fr,en-US;q=0.8,en;q=0.6,es;q=0.4,pl;q=0.2,nl;q=0.2,it;q=0.2,de;q=0.2",
+          "if-modified-since": "Sun, 12 Nov 2017 15:11:01 GMT"
+        },
+        "response": {
+          "X-Application-Context": "application:8081",
+          "Last-Modified": "Sun, 12 Nov 2017 21:05:52 GMT",
+          "Accept-Ranges": "bytes",
+          "Content-Type": "text/css",
+          "Content-Length": "0",
+          "Date": "Sun, 12 Nov 2017 21:08:29 GMT",
+          "status": "200"
+        }
+      },
+      "timeTaken": "27"
+    }
+  },
+  {
+    "timestamp": 1510520909452,
+    "info": {
+      "method": "GET",
+      "path": "/admin/",
+      "headers": {
+        "request": {
+          "host": "localhost:8081",
+          "connection": "keep-alive",
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36",
+          "upgrade-insecure-requests": "1",
+          "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8",
+          "accept-encoding": "gzip, deflate, br",
+          "accept-language": "fr,en-US;q=0.8,en;q=0.6,es;q=0.4,pl;q=0.2,nl;q=0.2,it;q=0.2,de;q=0.2",
+          "if-modified-since": "Sun, 12 Nov 2017 15:11:01 GMT"
+        },
+        "response": {
+          "X-Application-Context": "application:8081",
+          "Last-Modified": "Sun, 12 Nov 2017 21:05:52 GMT",
+          "Accept-Ranges": "bytes",
+          "Content-Type": "text/html;charset=UTF-8",
+          "Content-Language": "fr",
+          "Content-Length": "1294",
+          "Date": "Sun, 12 Nov 2017 21:08:29 GMT",
+          "status": "200"
+        }
+      },
+      "timeTaken": "104"
+    }
+  }
+]
