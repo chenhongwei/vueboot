@@ -1,7 +1,7 @@
 <template>
   <div class="card card-page">
     <div class="card-header d-flex">
-      <div>Loggers</div>
+      <div @click="setLimit(50)">Loggers</div>
       <div class="ml-auto">
         <i class="fa space" :class="{'pointer': source, 'fa-eye': source, 'fa-eye-slash': !source}"
         aria-hidden="true" @click="showSource = source && true"></i>
@@ -12,11 +12,12 @@
     </div>
     <div class="card-body">
       <div id="loggers">
-        <v-client-table :data="loggers" :columns="columns" :options="options">
+        <v-client-table ref="table" :data="loggers" :columns="columns" :options="options">
           <template slot="child_row" slot-scope="props">
             <div><b>name:</b> {{props.row.name}}</div>
           </template>
         </v-client-table>
+        <pagination :table="table"></pagination>
       </div>
     </div>
   </div>
@@ -30,6 +31,10 @@ export default {
   extends: Abstract,
   data () {
     return {
+      ready: false,
+      table: null,
+      countText: 'Showing {from} to {to} of {count} records|{count} records|One record',
+      maxPages: 10,
       loggers: [],
       columns: ['name', 'configuredLevel', 'effectiveLevel', 'update'],
       headings: {
@@ -46,6 +51,9 @@ export default {
         }
       }
     }
+  },
+  mounted () {
+    this.table = this.$refs.table
   },
   methods: {
     internalRefresh () {

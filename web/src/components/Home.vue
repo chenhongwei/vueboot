@@ -1,17 +1,15 @@
 <template>
-  <div class="hello">
-    <div class="card card-page">
-      <div class="card-header">Home</div>
-      <div class="card-body">
-        <div class="row">
-          <div class="col-md-4">
-            <img src="../../static/img/logo.png">
-          </div>
-          <div class="col-md">
-            <h1>{{ msg }}</h1>
-            <p v-cloak>{{ $t('content', {'content': 'nice'}) }}</p>
-            <p v-cloak>{{ $t('content2') }}</p>
-          </div>
+  <div class="card card-page">
+    <div class="card-header">Home</div>
+    <div class="card-body">
+      <div class="row">
+        <div class="col-md-4">
+          <img src="../../static/img/logo.png">
+        </div>
+        <div class="col-md">
+          <h1>{{ msg }}</h1>
+          <p v-cloak>{{ $t('content', {'content': 'nice'}) }}</p>
+          <p v-cloak>{{ $t('content2') }}</p>
         </div>
       </div>
     </div>

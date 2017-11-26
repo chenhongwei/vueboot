@@ -286,6 +286,14 @@
 
 /* Tables */
 
+.VueTables > .row {
+  display: none;
+}
+
+.VuePagination {
+  display: none;
+}
+
 .VuePagination__pagination {
   float: right;
 }

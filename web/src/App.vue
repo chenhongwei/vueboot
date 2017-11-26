@@ -2,8 +2,8 @@
   <div id="app">
     <notifications group="general" position="top right" classes="notification-custom" :width="300" :duration="5000" :speed="500" />
     <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
-      <a class="navbar-brand" href="#">Vue</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" :aria-expanded="navbarExp"
+      <router-link :to="{ path: '/' }" class="navbar-brand">Vue</router-link>
+      <button class="navbar-toggler pointer" type="button" data-toggle="collapse" :aria-expanded="navbarExp"
       aria-label="Toggle navigation" @click.stop="toggleNavbar()" v-click-outside="closeNavbar">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -72,6 +72,7 @@ import vuexI18n from 'vuex-i18n'
 import Modal from './components/Modal'
 import Confirm from './components/Confirm'
 import Raw from './components/Raw'
+import Pagination from './components/Pagination'
 import ActuatorRoutes from './components/actuator/actuator'
 import ClickOutside from 'v-click-outside'
 import VueCodeMirror from 'vue-codemirror'
@@ -117,6 +118,7 @@ Vue.use(ApiService, process.env.BASE_URL, process.env.MANAGE_CONTEXT_PATH)
 Vue.component('modal', Modal)
 Vue.component('confirm', Confirm)
 Vue.component('raw', Raw)
+Vue.component('pagination', Pagination)
 
 const store = new Vuex.Store()
 Vue.use(vuexI18n.plugin, store, {
