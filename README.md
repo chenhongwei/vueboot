@@ -13,6 +13,7 @@
 * https://github.com/Akryum/v-tooltip
 * https://github.com/Inndy/vue-clipboard2
 * https://github.com/euvl/vue-notification
+* https://github.com/apertureless/vue-chartjs
 
 ## Links
 

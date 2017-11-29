@@ -73,6 +73,7 @@ import Modal from './components/Modal'
 import Confirm from './components/Confirm'
 import Raw from './components/Raw'
 import Pagination from './components/Pagination'
+import Pie from './components/Pie'
 import ActuatorRoutes from './components/actuator/actuator'
 import ClickOutside from 'v-click-outside'
 import VueCodeMirror from 'vue-codemirror'
@@ -119,6 +120,8 @@ Vue.component('modal', Modal)
 Vue.component('confirm', Confirm)
 Vue.component('raw', Raw)
 Vue.component('pagination', Pagination)
+
+Vue.component('pie', Pie)
 
 const store = new Vuex.Store()
 Vue.use(vuexI18n.plugin, store, {
